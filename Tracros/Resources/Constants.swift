@@ -17,3 +17,7 @@ let format = "json"
 let sort = "r"
 let max = "15"
 let terms = "q"
+
+//Composition Parameters
+let ndbno = "ndbno"
+let type = "b"

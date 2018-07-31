@@ -13,7 +13,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var items: [SearchItems] = [] {
+    var selectedFood: FoodItem?
+    
+    var items: [SearchItem] = [] {
         didSet{
             DispatchQueue.main.async {
                 self.searchTableView.reloadData()
@@ -31,6 +33,15 @@ class SearchViewController: UIViewController {
         searchTableView.dataSource = self
         searchTableView.delegate = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toItemDetailVC" {
+            guard let destination = segue.destination as? FoodDetailTableViewController else {return}
+            print("destination")
+            destination.foodItem = selectedFood
+            
+        }
+    }
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
@@ -47,7 +58,20 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toItemDetailVC", sender: self)
+        print("Cell Pressed")
+        let id = items[indexPath.row].ndbno
+        FoodCompositionResultsController.fetchItem(withID: id) { (item) in
+            if let item = item {
+                print("Item Fetched")
+                self.selectedFood = item
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toItemDetailVC", sender: self)
+
+                }
+            }
+            
+            
+        }
     }
 
 }

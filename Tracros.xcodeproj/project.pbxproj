@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11CCEF8210FE8AA004C350E /* FoodCompositionResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEF7210FE8AA004C350E /* FoodCompositionResultsController.swift */; };
+		A11CCEFA210FE8D4004C350E /* CompositionResultsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEF9210FE8D4004C350E /* CompositionResultsDictionary.swift */; };
+		A11CCEFD210FEEC7004C350E /* FoodDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEFC210FEEC7004C350E /* FoodDetailTableViewController.swift */; };
 		A12651F020FE7731000F9A6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651EF20FE7731000F9A6B /* Constants.swift */; };
 		A12651F220FE7874000F9A6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651F120FE7874000F9A6B /* Extensions.swift */; };
 		A12651F420FE7A19000F9A6B /* SearchResultsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A11CCEF7210FE8AA004C350E /* FoodCompositionResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCompositionResultsController.swift; sourceTree = "<group>"; };
+		A11CCEF9210FE8D4004C350E /* CompositionResultsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionResultsDictionary.swift; sourceTree = "<group>"; };
+		A11CCEFC210FEEC7004C350E /* FoodDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailTableViewController.swift; sourceTree = "<group>"; };
 		A12651EF20FE7731000F9A6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A12651F120FE7874000F9A6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDictionary.swift; sourceTree = "<group>"; };
@@ -72,13 +78,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A11CCEFB210FEE56004C350E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */,
+				A11CCEF9210FE8D4004C350E /* CompositionResultsDictionary.swift */,
+				A1B81CB9210BECE600AF2476 /* FoodItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A12651F520FE7D83000F9A6B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				A1F2DC3C20F6A100005AA391 /* MainViewController.swift */,
+				A12652262107D102000F9A6B /* TrackViewController.swift */,
 				A1F2DC3E20F6A100005AA391 /* MealPlanningViewController.swift */,
 				A1B81CB5210BB14600AF2476 /* SearchViewController.swift */,
-				A12652262107D102000F9A6B /* TrackViewController.swift */,
+				A11CCEFC210FEEC7004C350E /* FoodDetailTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -128,9 +145,9 @@
 				A12651F520FE7D83000F9A6B /* ViewControllers */,
 				A126522A21092327000F9A6B /* TableViewCell */,
 				A12651F620FE7D97000F9A6B /* ItemSearchController.swift */,
-				A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */,
+				A11CCEF7210FE8AA004C350E /* FoodCompositionResultsController.swift */,
+				A11CCEFB210FEE56004C350E /* Models */,
 				A17710B720F7F45700CE75E4 /* Resources */,
-				A1B81CB9210BECE600AF2476 /* FoodItem.swift */,
 			);
 			path = Tracros;
 			sourceTree = "<group>";
@@ -245,14 +262,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11CCEF8210FE8AA004C350E /* FoodCompositionResultsController.swift in Sources */,
 				A12652272107D102000F9A6B /* TrackViewController.swift in Sources */,
 				A12651F220FE7874000F9A6B /* Extensions.swift in Sources */,
 				A1F2DC3F20F6A100005AA391 /* MealPlanningViewController.swift in Sources */,
+				A11CCEFD210FEEC7004C350E /* FoodDetailTableViewController.swift in Sources */,
 				A1B81CB6210BB14600AF2476 /* SearchViewController.swift in Sources */,
 				A1B81CBA210BECE600AF2476 /* FoodItem.swift in Sources */,
 				A1F2DC3B20F6A100005AA391 /* AppDelegate.swift in Sources */,
 				A1F2DC3D20F6A100005AA391 /* MainViewController.swift in Sources */,
 				A12651F420FE7A19000F9A6B /* SearchResultsDictionary.swift in Sources */,
+				A11CCEFA210FE8D4004C350E /* CompositionResultsDictionary.swift in Sources */,
 				A12651F020FE7731000F9A6B /* Constants.swift in Sources */,
 				A12651F720FE7D97000F9A6B /* ItemSearchController.swift in Sources */,
 			);

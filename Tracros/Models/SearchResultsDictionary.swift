@@ -14,14 +14,14 @@ struct SearchResultsDictionary: Codable {
 }
 
 struct List: Codable {
-    let items : [SearchItems]
+    let items : [SearchItem]
     
     enum CodingKeys: String, CodingKey {
         case items = "item"
     }
 }
 
-struct SearchItems: Codable {
+struct SearchItem: Codable {
     let name: String
     let ndbno: String
 }
