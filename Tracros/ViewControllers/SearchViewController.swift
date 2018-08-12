@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var selectedFood: FoodItem?
+    var selectedFood: DatabaseItem?
     
     var items: [SearchItem] = [] {
         didSet{

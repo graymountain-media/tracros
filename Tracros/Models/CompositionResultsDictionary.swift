@@ -14,5 +14,5 @@ struct CompositionResultsDictionary: Codable {
    
 }
 struct FoodResults: Codable {
-    let food: FoodItem
+    let food: DatabaseItem
 }

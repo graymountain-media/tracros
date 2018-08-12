@@ -10,7 +10,7 @@ import Foundation
 
 class FoodCompositionResultsController {
     
-    static func fetchItem(withID id: String, completion: @escaping(FoodItem?) -> Void) {
+    static func fetchItem(withID id: String, completion: @escaping(DatabaseItem?) -> Void) {
         
         let queries = [
             "api_key" : apiKey,
