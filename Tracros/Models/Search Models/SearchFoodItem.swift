@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DatabaseItem: Codable {
+struct SearchFoodItem: Codable {
     let desc: Description
     let nutrients: [Nutrient]
 }

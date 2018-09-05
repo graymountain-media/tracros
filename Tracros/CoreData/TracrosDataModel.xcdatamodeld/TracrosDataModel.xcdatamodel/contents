@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Day" representedClassName="Day" syncable="YES" codeGenerationType="class"/>
-    <entity name="FoodItem" representedClassName="FoodItem" syncable="YES" codeGenerationType="class"/>
+    <entity name="FoodItem" representedClassName="FoodItem" syncable="YES" codeGenerationType="class">
+        <attribute name="calcium" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="carbs" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cholesterol" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fat" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fiber" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="iron" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="ndbno" attributeType="String" syncable="YES"/>
+        <attribute name="potassium" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="protein" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sodium" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sugars" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="meal" maxCount="1" deletionRule="Nullify" destinationEntity="Meal" inverseName="items" inverseEntity="Meal" syncable="YES"/>
+    </entity>
     <entity name="Meal" representedClassName="Meal" syncable="YES" codeGenerationType="class">
-        <relationship name="items" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FoodItem" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="day" maxCount="1" deletionRule="Nullify" destinationEntity="PlannedDay" inverseName="meals" inverseEntity="PlannedDay" syncable="YES"/>
+        <relationship name="items" toMany="YES" deletionRule="Nullify" destinationEntity="FoodItem" inverseName="meal" inverseEntity="FoodItem" syncable="YES"/>
+    </entity>
+    <entity name="Plan" representedClassName="Plan" syncable="YES" codeGenerationType="class">
+        <attribute name="duration" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="days" toMany="YES" deletionRule="Nullify" destinationEntity="PlannedDay" inverseName="plan" inverseEntity="PlannedDay" syncable="YES"/>
+    </entity>
+    <entity name="PlannedDay" representedClassName="PlannedDay" syncable="YES" codeGenerationType="class">
+        <attribute name="number" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="meals" toMany="YES" deletionRule="Nullify" destinationEntity="Meal" inverseName="day" inverseEntity="Meal" syncable="YES"/>
+        <relationship name="plan" maxCount="1" deletionRule="Nullify" destinationEntity="Plan" inverseName="days" inverseEntity="Plan" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Meal" positionX="-36" positionY="9" width="128" height="60"/>
-        <element name="Day" positionX="0" positionY="45" width="128" height="45"/>
-        <element name="FoodItem" positionX="27" positionY="72" width="128" height="45"/>
+        <element name="FoodItem" positionX="-63" positionY="-18" width="128" height="240"/>
+        <element name="Meal" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="Plan" positionX="-18" positionY="117" width="128" height="105"/>
+        <element name="PlannedDay" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>

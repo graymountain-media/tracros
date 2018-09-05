@@ -1,5 +1,5 @@
 //
-//  FoodDetailTableViewController.swift
+//  SearchDetailTableViewController.swift
 //  Tracros
 //
 //  Created by Jake Gray on 7/30/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodDetailTableViewController: UITableViewController {
+class SearchDetailTableViewController: UITableViewController {
     
     // MARK: - IB OUtlets
     @IBOutlet weak var ironLabel: UILabel!
@@ -33,7 +33,7 @@ class FoodDetailTableViewController: UITableViewController {
     @IBOutlet weak var foodNameLabel: UILabel!
     
     // Mark: - Properties
-    var foodItem: DatabaseItem?
+    var foodItem: SearchFoodItem?
     var numberOfServings = 1.0
     let servingFractions = ["","1/8", "1/4", "3/8", "1/2", "5/8", "3/4", "7/8"]
     
@@ -175,7 +175,7 @@ class FoodDetailTableViewController: UITableViewController {
 
 }
 
-extension FoodDetailTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension SearchDetailTableViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }

@@ -1,5 +1,5 @@
 //
-//  CompositionResultsDictionary.swift
+//  DataResultsDictionary.swift
 //  Tracros
 //
 //  Created by Jake Gray on 7/30/18.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct CompositionResultsDictionary: Codable {
+struct DataResultsDictionary: Codable {
     let foods: [FoodResults]
     
    
 }
 struct FoodResults: Codable {
-    let food: DatabaseItem
+    let food: SearchFoodItem
 }

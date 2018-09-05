@@ -10,7 +10,7 @@ import Foundation
 
 class FoodCompositionResultsController {
     
-    static func fetchItem(withID id: String, completion: @escaping(DatabaseItem?) -> Void) {
+    static func fetchItem(withID id: String, completion: @escaping(SearchFoodItem?) -> Void) {
         
         let queries = [
             "api_key" : apiKey,
@@ -31,7 +31,7 @@ class FoodCompositionResultsController {
             if let data = data {
                 do{
                     let jsonDecoder = JSONDecoder()
-                    let compDict = try jsonDecoder.decode(CompositionResultsDictionary.self, from: data)
+                    let compDict = try jsonDecoder.decode(DataResultsDictionary.self, from: data)
                     let foods = compDict.foods.first
                     let foodItem = foods?.food
                     completion(foodItem)

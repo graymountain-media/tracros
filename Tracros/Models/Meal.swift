@@ -6,21 +6,13 @@
 //  Copyright © 2018 Jake Gray. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import CoreData
 
-class Meal {
-    let type: MealType
-    let items: [DatabaseItem]
-    
-    init(type: MealType) {
+extension Meal {
+    convenience init(type: String, context: NSManagedObjectContext = CoreDataStack.context) {
+        self.init(context: context)
         self.type = type
         self.items = []
     }
-}
-
-enum MealType {
-    case breakfast
-    case lunch
-    case dinner
-    case snacks
 }

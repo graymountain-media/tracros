@@ -9,14 +9,20 @@
 import UIKit
 
 class MealPlanningViewController: UIViewController {
-
+    
+    //MARK: Outlets
     @IBOutlet weak var mealTableView: UITableView!
     
-    var breakfastItems: [String]?
+    //MARK: Properties
+    var plan: Plan?
+    var currentPlannedDay: PlannedDay?
+    
+    var breakfast: [String]?
     var lunchItems: [String]?
     var dinnerItems: [String]?
     var snackItems: [String]?
     
+    //MARK: Objects
     lazy var addBreakfastButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -49,44 +55,62 @@ class MealPlanningViewController: UIViewController {
         return button
     }()
     
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         mealTableView.layer.cornerRadius = 5
         mealTableView.dataSource = self
         mealTableView.delegate = self
         
+        performSegue(withIdentifier: "toCreatePlan", sender: nil)
+        
 //        let nib = UINib.init(nibName: "AddFoodItemTableViewCell", bundle: nil)
 //        mealTableView.register(nib, forCellReuseIdentifier: "addCell")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        performSegue(withIdentifier: "toSearchVC", sender: self)
-    }
     
+    //MARK: Button Actions
     @objc private func addBreakfastPresed() {
         print("breakfast pressed")
-        performSegue(withIdentifier: "toSearchVC", sender: self)
+        performSegue(withIdentifier: "toBreakfastSearchVC", sender: self)
     }
     
     @objc private func addLunchPresed() {
         print("Lunch pressed")
-        performSegue(withIdentifier: "toSearchVC", sender: self)
+        performSegue(withIdentifier: "toLunchSearchVC", sender: self)
     }
     
     @objc private func addDinnerPresed() {
         print("dinner PRessed")
-        performSegue(withIdentifier: "toSearchVC", sender: self)
+        performSegue(withIdentifier: "toDinnerSearchVC", sender: self)
     }
     
     @objc private func addSnackPresed() {
         print("snack pressed")
-        performSegue(withIdentifier: "toSearchVC", sender: self)
+        performSegue(withIdentifier: "toSnackSearchVC", sender: self)
     }
 
-
+    //MARK: Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var mealToPass: Meal?
+        guard let meals = currentPlannedDay?.meals?.allObjects as? [Meal] else {return}
+        
+        switch segue.identifier {
+        case "toBreakfastSearchVC":
+            mealToPass = meals[0]
+        case "toLunchSearchVC":
+            mealToPass = meals[1]
+        case "toDinnerSearchVC":
+            mealToPass = meals[2]
+        case "toSnackSearchVC":
+            mealToPass = meals[3]
+        default:
+            print("meal not found")
+        }
+        guard let destinationVC = segue.destination as? SearchViewController else {return}
+    }
 }
 
+//MARK: TableViewDelegate
 extension MealPlanningViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -110,10 +134,10 @@ extension MealPlanningViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section{
         case 0:
-            if breakfastItems == nil || breakfastItems?.count == 0 {
+            if breakfast == nil || breakfast?.count == 0 {
                 return 1
             } else {
-                return (breakfastItems?.count)!
+                return (breakfast?.count)!
             }
         case 1:
             guard let items = lunchItems?.count else {return 1}
@@ -131,7 +155,7 @@ extension MealPlanningViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "addCell", for: indexPath)
-        if breakfastItems == nil || breakfastItems?.count == 0 {
+        if breakfast == nil || breakfast?.count == 0 {
             cell.textLabel?.text = "No Items"
         } else {
             cell.textLabel?.text = "Some tems"

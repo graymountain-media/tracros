@@ -13,7 +13,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var selectedFood: DatabaseItem?
+    var selectedFood: SearchFoodItem?
     
     var items: [SearchItem] = [] {
         didSet{
@@ -36,7 +36,7 @@ class SearchViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toItemDetailVC" {
-            guard let destination = segue.destination as? FoodDetailTableViewController else {return}
+            guard let destination = segue.destination as? SearchDetailTableViewController else {return}
             print("destination")
             destination.foodItem = selectedFood
             

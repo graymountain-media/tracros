@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11879472121023B0001B8C8 /* TracrosDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A11879452121023B0001B8C8 /* TracrosDataModel.xcdatamodeld */; };
+		A1187949212102490001B8C8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1187948212102490001B8C8 /* CoreDataStack.swift */; };
+		A118794D212107FE0001B8C8 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118794C212107FE0001B8C8 /* FoodItem.swift */; };
+		A118794F21211BF50001B8C8 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A118794E21211BF50001B8C8 /* Plan.swift */; };
 		A11CCEF8210FE8AA004C350E /* FoodCompositionResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEF7210FE8AA004C350E /* FoodCompositionResultsController.swift */; };
-		A11CCEFA210FE8D4004C350E /* CompositionResultsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEF9210FE8D4004C350E /* CompositionResultsDictionary.swift */; };
-		A11CCEFD210FEEC7004C350E /* FoodDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEFC210FEEC7004C350E /* FoodDetailTableViewController.swift */; };
+		A11CCEFA210FE8D4004C350E /* DataResultsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEF9210FE8D4004C350E /* DataResultsDictionary.swift */; };
+		A11CCEFD210FEEC7004C350E /* SearchDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEFC210FEEC7004C350E /* SearchDetailTableViewController.swift */; };
 		A11CCEFF21111DA2004C350E /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCEFE21111DA2004C350E /* Meal.swift */; };
-		A11CCF0121111E75004C350E /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCF0021111E75004C350E /* Day.swift */; };
+		A11CCF0121111E75004C350E /* PlannedDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11CCF0021111E75004C350E /* PlannedDay.swift */; };
+		A122C9FC214070A800399AEC /* CreatePlanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122C9FB214070A800399AEC /* CreatePlanTableViewController.swift */; };
+		A122C9FE21408B1900399AEC /* PlanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A122C9FD21408B1900399AEC /* PlanType.swift */; };
 		A12651F020FE7731000F9A6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651EF20FE7731000F9A6B /* Constants.swift */; };
 		A12651F220FE7874000F9A6B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651F120FE7874000F9A6B /* Extensions.swift */; };
 		A12651F420FE7A19000F9A6B /* SearchResultsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */; };
 		A12651F720FE7D97000F9A6B /* ItemSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12651F620FE7D97000F9A6B /* ItemSearchController.swift */; };
 		A12652272107D102000F9A6B /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12652262107D102000F9A6B /* TrackViewController.swift */; };
 		A1B81CB6210BB14600AF2476 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81CB5210BB14600AF2476 /* SearchViewController.swift */; };
-		A1B81CBA210BECE600AF2476 /* DatabaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81CB9210BECE600AF2476 /* DatabaseItem.swift */; };
+		A1B81CBA210BECE600AF2476 /* SearchFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B81CB9210BECE600AF2476 /* SearchFoodItem.swift */; };
+		A1C24581212C941A00069BB5 /* PlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C24580212C941A00069BB5 /* PlanController.swift */; };
+		A1C24584212C957E00069BB5 /* PlannedDayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C24583212C957E00069BB5 /* PlannedDayController.swift */; };
+		A1C24586212C95FD00069BB5 /* MealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C24585212C95FD00069BB5 /* MealController.swift */; };
+		A1C2458A212C966000069BB5 /* FoodItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C24589212C966000069BB5 /* FoodItemController.swift */; };
 		A1F2DC3B20F6A100005AA391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2DC3A20F6A100005AA391 /* AppDelegate.swift */; };
 		A1F2DC3D20F6A100005AA391 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2DC3C20F6A100005AA391 /* MainViewController.swift */; };
 		A1F2DC3F20F6A100005AA391 /* MealPlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F2DC3E20F6A100005AA391 /* MealPlanningViewController.swift */; };
@@ -39,18 +49,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A11879462121023B0001B8C8 /* TracrosDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TracrosDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A1187948212102490001B8C8 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		A118794C212107FE0001B8C8 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		A118794E21211BF50001B8C8 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		A11CCEF7210FE8AA004C350E /* FoodCompositionResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCompositionResultsController.swift; sourceTree = "<group>"; };
-		A11CCEF9210FE8D4004C350E /* CompositionResultsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionResultsDictionary.swift; sourceTree = "<group>"; };
-		A11CCEFC210FEEC7004C350E /* FoodDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailTableViewController.swift; sourceTree = "<group>"; };
+		A11CCEF9210FE8D4004C350E /* DataResultsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResultsDictionary.swift; sourceTree = "<group>"; };
+		A11CCEFC210FEEC7004C350E /* SearchDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailTableViewController.swift; sourceTree = "<group>"; };
 		A11CCEFE21111DA2004C350E /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		A11CCF0021111E75004C350E /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		A11CCF0021111E75004C350E /* PlannedDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedDay.swift; sourceTree = "<group>"; };
+		A122C9FB214070A800399AEC /* CreatePlanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlanTableViewController.swift; sourceTree = "<group>"; };
+		A122C9FD21408B1900399AEC /* PlanType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanType.swift; sourceTree = "<group>"; };
 		A12651EF20FE7731000F9A6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A12651F120FE7874000F9A6B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsDictionary.swift; sourceTree = "<group>"; };
 		A12651F620FE7D97000F9A6B /* ItemSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSearchController.swift; sourceTree = "<group>"; };
 		A12652262107D102000F9A6B /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		A1B81CB5210BB14600AF2476 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		A1B81CB9210BECE600AF2476 /* DatabaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseItem.swift; sourceTree = "<group>"; };
+		A1B81CB9210BECE600AF2476 /* SearchFoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFoodItem.swift; sourceTree = "<group>"; };
+		A1C24580212C941A00069BB5 /* PlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanController.swift; sourceTree = "<group>"; };
+		A1C24583212C957E00069BB5 /* PlannedDayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedDayController.swift; sourceTree = "<group>"; };
+		A1C24585212C95FD00069BB5 /* MealController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealController.swift; sourceTree = "<group>"; };
+		A1C24589212C966000069BB5 /* FoodItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemController.swift; sourceTree = "<group>"; };
 		A1F2DC3720F6A100005AA391 /* Tracros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F2DC3A20F6A100005AA391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1F2DC3C20F6A100005AA391 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -82,14 +102,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A11CCEFB210FEE56004C350E /* Models */ = {
+		A118794A212105510001B8C8 /* Search View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1B81CB5210BB14600AF2476 /* SearchViewController.swift */,
+				A11CCEFC210FEEC7004C350E /* SearchDetailTableViewController.swift */,
+			);
+			path = "Search View Controllers";
+			sourceTree = "<group>";
+		};
+		A118794B212106370001B8C8 /* Search Models */ = {
 			isa = PBXGroup;
 			children = (
 				A12651F320FE7A19000F9A6B /* SearchResultsDictionary.swift */,
-				A11CCEF9210FE8D4004C350E /* CompositionResultsDictionary.swift */,
-				A1B81CB9210BECE600AF2476 /* DatabaseItem.swift */,
+				A11CCEF9210FE8D4004C350E /* DataResultsDictionary.swift */,
+				A1B81CB9210BECE600AF2476 /* SearchFoodItem.swift */,
+			);
+			path = "Search Models";
+			sourceTree = "<group>";
+		};
+		A11CCEFB210FEE56004C350E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A118794B212106370001B8C8 /* Search Models */,
+				A118794E21211BF50001B8C8 /* Plan.swift */,
+				A11CCF0021111E75004C350E /* PlannedDay.swift */,
 				A11CCEFE21111DA2004C350E /* Meal.swift */,
-				A11CCF0021111E75004C350E /* Day.swift */,
+				A118794C212107FE0001B8C8 /* FoodItem.swift */,
+				A122C9FD21408B1900399AEC /* PlanType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +137,8 @@
 		A11CCF0D21127F5E004C350E /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A11879452121023B0001B8C8 /* TracrosDataModel.xcdatamodeld */,
+				A1187948212102490001B8C8 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -107,8 +149,8 @@
 				A1F2DC3C20F6A100005AA391 /* MainViewController.swift */,
 				A12652262107D102000F9A6B /* TrackViewController.swift */,
 				A1F2DC3E20F6A100005AA391 /* MealPlanningViewController.swift */,
-				A1B81CB5210BB14600AF2476 /* SearchViewController.swift */,
-				A11CCEFC210FEEC7004C350E /* FoodDetailTableViewController.swift */,
+				A118794A212105510001B8C8 /* Search View Controllers */,
+				A122C9FB214070A800399AEC /* CreatePlanTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -124,6 +166,17 @@
 				A12651F120FE7874000F9A6B /* Extensions.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1C24582212C942300069BB5 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1C24580212C941A00069BB5 /* PlanController.swift */,
+				A1C24583212C957E00069BB5 /* PlannedDayController.swift */,
+				A1C24585212C95FD00069BB5 /* MealController.swift */,
+				A1C24589212C966000069BB5 /* FoodItemController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		A1F2DC2E20F6A100005AA391 = {
@@ -152,6 +205,7 @@
 				A11CCEF7210FE8AA004C350E /* FoodCompositionResultsController.swift */,
 				A12651F520FE7D83000F9A6B /* ViewControllers */,
 				A11CCEFB210FEE56004C350E /* Models */,
+				A1C24582212C942300069BB5 /* Model Controllers */,
 				A11CCF0D21127F5E004C350E /* CoreData */,
 				A17710B720F7F45700CE75E4 /* Resources */,
 			);
@@ -270,18 +324,28 @@
 			files = (
 				A11CCEF8210FE8AA004C350E /* FoodCompositionResultsController.swift in Sources */,
 				A12652272107D102000F9A6B /* TrackViewController.swift in Sources */,
+				A1C24584212C957E00069BB5 /* PlannedDayController.swift in Sources */,
 				A11CCEFF21111DA2004C350E /* Meal.swift in Sources */,
 				A12651F220FE7874000F9A6B /* Extensions.swift in Sources */,
+				A118794D212107FE0001B8C8 /* FoodItem.swift in Sources */,
+				A1C2458A212C966000069BB5 /* FoodItemController.swift in Sources */,
 				A1F2DC3F20F6A100005AA391 /* MealPlanningViewController.swift in Sources */,
-				A11CCEFD210FEEC7004C350E /* FoodDetailTableViewController.swift in Sources */,
+				A11CCEFD210FEEC7004C350E /* SearchDetailTableViewController.swift in Sources */,
 				A1B81CB6210BB14600AF2476 /* SearchViewController.swift in Sources */,
-				A1B81CBA210BECE600AF2476 /* DatabaseItem.swift in Sources */,
-				A11CCF0121111E75004C350E /* Day.swift in Sources */,
+				A1B81CBA210BECE600AF2476 /* SearchFoodItem.swift in Sources */,
+				A11CCF0121111E75004C350E /* PlannedDay.swift in Sources */,
 				A1F2DC3B20F6A100005AA391 /* AppDelegate.swift in Sources */,
+				A118794F21211BF50001B8C8 /* Plan.swift in Sources */,
+				A122C9FE21408B1900399AEC /* PlanType.swift in Sources */,
 				A1F2DC3D20F6A100005AA391 /* MainViewController.swift in Sources */,
 				A12651F420FE7A19000F9A6B /* SearchResultsDictionary.swift in Sources */,
-				A11CCEFA210FE8D4004C350E /* CompositionResultsDictionary.swift in Sources */,
+				A1C24581212C941A00069BB5 /* PlanController.swift in Sources */,
+				A1187949212102490001B8C8 /* CoreDataStack.swift in Sources */,
+				A11CCEFA210FE8D4004C350E /* DataResultsDictionary.swift in Sources */,
+				A1C24586212C95FD00069BB5 /* MealController.swift in Sources */,
+				A122C9FC214070A800399AEC /* CreatePlanTableViewController.swift in Sources */,
 				A12651F020FE7731000F9A6B /* Constants.swift in Sources */,
+				A11879472121023B0001B8C8 /* TracrosDataModel.xcdatamodeld in Sources */,
 				A12651F720FE7D97000F9A6B /* ItemSearchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Skybridge.Tracros;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Skybridge.myMealPrep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,7 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Skybridge.Tracros;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Skybridge.myMealPrep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,6 +611,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A11879452121023B0001B8C8 /* TracrosDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A11879462121023B0001B8C8 /* TracrosDataModel.xcdatamodel */,
+			);
+			currentVersion = A11879462121023B0001B8C8 /* TracrosDataModel.xcdatamodel */;
+			path = TracrosDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1F2DC2F20F6A100005AA391 /* Project object */;
 }
